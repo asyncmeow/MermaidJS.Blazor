@@ -2,24 +2,9 @@
     console.log("initializeGlobals", window.mermaidDiagramBlazorOptions);
     function loadMermaid() {
         return new Promise((resolve) => {
-            if (!window.mermaid) {
-                const script = document.createElement("script");
-
-                script.src = "_content/MermaidJS.Blazor/lib/mermaid/mermaid.min.js";
-                script.async = false;
-                script.defer = false;
-                script.onload = () => {
-                    window.mermaid.initialize(window.mermaidDiagramBlazorOptions);
-
-                    resolve();
-                };
-
-                document.body.appendChild(script);
-            }
-
-            else {
-                resolve();
-            }
+            window.mermaid.initialize(window.mermaidDiagramBlazorOptions);
+            
+            resolve();
         });
     }
 
