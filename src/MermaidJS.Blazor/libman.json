@@ -1,9 +1,9 @@
 {
   "version": "1.0",
-  "defaultProvider": "cdnjs",
+  "defaultProvider": "unpkg",
   "libraries": [
     {
-      "library": "mermaid@10.6.1",
+      "library": "mermaid@11.2.1",
       "destination": "wwwroot/lib/mermaid"
     }
   ]
